@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Sport Family Connect</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="contact-page">
+
+   <header class="simple-header">
+    <nav class="container nav-flex">
+        <div class="logo">
+            <a href="index.html" class="logo-link">
+                <img src="sportfamilyconnectlogo.png" alt="Sport Family Connect Logo" class="logo-img">
+            </a>
+        </div>
+        
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" class="active">Accueil</a></li>
+            <li><a href="index.html#ai-coach">AI Coach</a></li> 
+            <li><a href="rse.html">Engagements</a></li> 
+            <li><a href="contact.html">Contact</a></li>
+            <li class="mobile-auth"><a href="#" class="login-link">Connexion</a></li>
+            <li class="mobile-auth"><a href="#" class="signup-btn">Créer un compte</a></li>
+        </ul>
+
+        <div class="nav-auth">
+            <a href="#" class="login-link">Connexion</a>
+            <a href="#" class="signup-btn">Créer un compte</a>
+        </div>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    </nav>
+</header>
+
+    <main class="contact-container">
+        <section class="contact-intro">
+            <span class="sub-title" style="text-align: center;">Une question ? Un partenariat ?</span>
+            <h1>Contactez-nous</h1>
+        </section>
+
+        <section class="contact-grid">
+            <div class="contact-form-wrapper">
+                <form action="#" method="POST" class="main-form">
+                    <div class="form-group">
+                        <label for="name">Nom de la famille / Organisation</label>
+                        <input type="text" id="name" name="name" placeholder="Ex: François Dupont" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Adresse Email</label>
+                        <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Sujet</label>
+                        <select id="subject" name="subject">
+                            <option value="info">Informations générales</option>
+                            <option value="tech">Support technique AI Coach</option>
+                            <option value="rgpd">Question relative au RGPD / Données</option>
+                            <option value="press">Presse & Partenariats</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Votre message</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Comment pouvons-nous vous aider ?" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Envoyer le message</button>
+                </form>
+            </div>
+
+            <div class="contact-info">
+                <div class="info-card">
+                    <h3>Support Technique</h3>
+                    <p>Disponible 7j/7 pour les utilisateurs Premium de l'application sport famille.</p>
+                    <span class="blue-text">support@sportfamilyconnect.fr</span>
+                </div>
+                <div class="info-card">
+                    <h3>Notre siège Social</h3>
+                    <p>Paris, France</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="logo">SPORT <span>FAMILY</span> CONNECT</div>
+                <p class="brand-text">L'application éco-responsable et l'IA Sport au service du bien-être familial et du sport durable.</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>LÉGAL & ÉTHIQUE</h4>
+                <ul>
+                    <li><a href="rse.html" class="hover-underline-dash">Charte RSE & Engagements</a></li>
+                    <li><a href="rgpd.html" class="hover-underline-dash">Protection des données (RGPD)</a></li>
+                    <li><a href="contact.html" class="hover-underline-dash">Contactez-nous</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-socials">
+                <h4>SUIVEZ L'AVENTURE</h4>
+                <p class="handle">@sportfamilyconnect</p>
+                <div class="social-icons-list">
+                    <a href="https://instagram.com" target="_blank" class="social-card instagram-hover" aria-label="Instagram">
+                        <span class="social-text">Instagram</span>
+                    </a>
+                    <a href="https://tiktok.com" target="_blank" class="social-card tiktok-hover" aria-label="TikTok">
+                        <span class="social-text">TikTok</span>
+                    </a>
+                    <a href="https://facebook.com" target="_blank" class="social-card facebook-hover" aria-label="Facebook">
+                        <span class="social-text">Facebook</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+
+    // Optionnel : Ferme le menu automatiquement si on clique sur un lien d'ancrage (ex: #ai-coach)
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            menuToggle.classList.remove('active');
+            navLinks.classList.remove('active');
+        });
+    });
+</script>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 Sport Family Connect. Tous droits réservés. IA Responsable.</p>
+                <p class="eco-badge">Site éco-conçu</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
